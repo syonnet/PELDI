@@ -1,0 +1,184 @@
+/* Nueva Paleta de colores */
+        :root {
+            --color-primary: #1a5276;
+            --color-secondary: #2980b9;
+            --color-accent: #e74c3c;
+            --color-success: #27ae60;
+            --color-light: #ecf0f1;
+            --color-dark: #2c3e50;
+            --color-warning: #f39c12;
+            --color-gray: #95a5a6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--color-dark);
+            background-color: #f8f9fa;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--color-primary) !important;
+            border-bottom: 3px solid var(--color-accent);
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .nav-link {
+            padding: 0.3rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--color-light) !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            color: white;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 3rem;
+            overflow: hidden; /* Ensures the blurred background doesn't overflow */
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(41, 128, 185, 0.85));
+            z-index: -1; /* Puts the pseudo-element behind the content */
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-section .lead {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--color-accent);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-header {
+            background-color: var(--color-primary);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.5rem 0.5rem 0 0 !important;
+        }
+
+        /* Accordion */
+        .accordion-button {
+            font-weight: 600;
+            background-color: rgba(236, 240, 241, 0.5);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        /* Dashboard */
+        .dashboard-card {
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: none;
+            background-color: white;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .dashboard-card .value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .dashboard-card .unit {
+            font-size: 1rem;
+            color: var(--color-gray);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
